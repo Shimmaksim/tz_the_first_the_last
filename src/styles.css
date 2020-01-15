@@ -1,0 +1,421 @@
+@font-face {
+  font-family: 'TT Travels';
+  src: url('./fonts/TTTravels-Light.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Schnyder Cond XL Demi';
+  src: url('./fonts/SchnyderXCondLDemi.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  padding-top: 30px;
+  cursor: none;
+}
+
+/* .link {
+  position: absolute;
+  color: #fff;
+  text-decoration: none;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+} */
+
+.cursor,
+.cursor2,
+.cursor3 {
+  position: fixed;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  left: -100px;
+  top: 50%;
+  cursor: none;
+}
+
+.drag {
+  position: relative;
+}
+
+.drag__title {
+  position: absolute;
+  right: -45px;
+  top: -25px;
+  color: black;
+  text-transform: uppercase;
+  font-size: 8px;
+  font-family: TT Travels;
+  opacity: 1;
+}
+
+/* .drug__hover {
+  display: block;
+  color: aqua;
+} */
+
+.cursor {
+  background-color: transparent;
+  height: 0;
+  width: 0;
+  z-index: 99;
+  cursor: none;
+}
+
+.cursor2,
+.cursor3 {
+  height: 17px;
+  width: 17px;
+  z-index: 99;
+  cursor: none;
+}
+
+.cursor2.hover,
+.cursor3.hover {
+  /* transform: scale(2) translateX(-25%) translateY(-25%); */
+  border: none;
+  mix-blend-mode: difference;
+  cursor: none;
+}
+
+.cursor2 {
+  border: 1px solid #000000;
+  opacity: 1;
+  cursor: none;
+}
+
+.cursor2.hover {
+  background: yellow;
+  opacity: 0.5;
+  cursor: none;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo__title {
+  font-family: GT America;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -1px;
+  color: #000000;
+}
+
+.list__paragraph {
+  list-style: none;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.paragraph__link {
+  font-family: TT Travels;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 14px;
+  cursor: none;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #000000;
+}
+
+.list__button {
+  list-style: none;
+}
+
+.btn {
+  width: 20px;
+  height: 32px;
+  background-color: transparent;
+  display: none;
+}
+
+.line-1 {
+  width: 20px;
+  height: 2px;
+  background-color: rgba(40, 40, 40, 0.57);
+}
+.line-2 {
+  width: 20px;
+  height: 2px;
+  background-color: rgba(40, 40, 40, 0.57);
+}
+
+.link-hover:hover {
+  color: #580300;
+  background-color: yellow;
+}
+
+.vector {
+  position: fixed;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  object-fit: cover;
+  transform: translateX(-50%) translateY(-50%);
+  max-height: 700px;
+}
+
+.menu__title {
+  position: fixed;
+  top: 43%;
+  left: 58%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 686px;
+  font-family: Schnyder Cond XL Demi;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 126px;
+  line-height: 86%;
+  z-index: 99;
+  text-transform: uppercase;
+  color: #580300;
+}
+
+.menu__title-left {
+  position: fixed;
+  top: 41%;
+  left: -17%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 99;
+  width: 369px;
+  font-family: Schnyder Cond XL Demi;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 96px;
+  line-height: 86%;
+
+  text-transform: uppercase;
+
+  mix-blend-mode: darken;
+  border: 0.837209px solid #580300;
+  box-sizing: border-box;
+  transform: rotate(-1.5deg);
+}
+
+.menu__title-right {
+  position: fixed;
+  top: 41%;
+  right: -37%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 688px;
+  font-family: Schnyder Cond XL Demi;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 96px;
+  line-height: 86%;
+  z-index: 99;
+  text-transform: uppercase;
+
+  mix-blend-mode: darken;
+  border: 0.837209px solid #580300;
+  box-sizing: border-box;
+  transform: rotate(1.5deg);
+}
+
+.photo {
+  object-fit: cover;
+}
+
+.first {
+  max-width: 476px;
+  cursor: none;
+  max-height: 702px;
+
+  position: fixed;
+  top: 100px;
+  left: 35%;
+  transform: translateX(-50%) translateY(-50%);
+  transform: rotate(1.5deg);
+}
+
+.second {
+  max-width: 238px;
+  max-height: 331px;
+  position: fixed;
+  top: 32%;
+  left: 17%;
+  transform: translateX(-50%) translateY(-50%);
+  transform: rotate(1.5deg);
+  cursor: none;
+}
+
+.third {
+  width: 345px;
+  max-height: 238px;
+  position: fixed;
+  top: 60%;
+  left: 60%;
+  transform: translateX(-50%) translateY(-50%);
+  transform: rotate(1.5deg);
+  cursor: none;
+}
+
+.footer__line {
+  display: block;
+  width: 56px;
+  height: 1px;
+  background-color: #393939;
+  opacity: 0.24;
+  margin: 20px;
+}
+
+.footer__title {
+  font-family: TT Travels;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.02em;
+  text-align: center;
+
+  color: #000000;
+}
+
+.footer {
+  width: 111px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .menu__title {
+    font-size: 70px;
+    width: 500px;
+  }
+
+  .menu__title-right {
+    font-size: 70px;
+    width: 502px;
+  }
+
+  .menu__title-left {
+    font-size: 70px;
+    width: 270px;
+  }
+
+  .first {
+    width: 359px;
+    height: 530px;
+  }
+
+  .second {
+    width: 163px;
+    height: 226px;
+  }
+
+  .third {
+    width: 224px;
+    height: 166px;
+  }
+
+  .btn {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu__title {
+    font-size: 54px;
+    width: 388px;
+    left: 62%;
+  }
+
+  .menu__title-right {
+    font-size: 54px;
+    width: 388px;
+  }
+
+  .menu__title-left {
+    font-size: 54px;
+    width: 208px;
+  }
+
+  .first {
+    width: 300px;
+    height: 450px;
+  }
+
+  .second {
+    width: 120px;
+    height: 180px;
+  }
+
+  .third {
+    width: 180px;
+    height: 120px;
+  }
+  .btn {
+    display: none;
+  }
+}
+
+@media (max-width: 426px) {
+  .menu__title {
+    font-size: 48px;
+    width: 388px;
+    left: 73%;
+  }
+
+  .menu__title-right {
+    font-size: 54px;
+    width: 211px;
+  }
+
+  .menu__title-left {
+    font-size: 54px;
+    width: 211px;
+    left: -36%;
+  }
+
+  .first {
+    width: 273px;
+    height: 400px;
+    left: 15%;
+  }
+
+  .second {
+    display: none;
+  }
+
+  .third {
+    display: none;
+  }
+
+  .logo__list {
+    display: none;
+  }
+  .btn {
+    display: block;
+  }
+  .block {
+    display: block;
+  }
+  .none {
+    display: none;
+  }
+}
