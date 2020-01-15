@@ -14,19 +14,9 @@ document.addEventListener('mousemove', parallax);
 const btn = document.querySelector('.btn');
 const list = document.querySelector('.logo__list');
 
-btn.addEventListener('click', block);
-
-function block() {
-  btn.classList.add('none');
-  list.classList.add('block');
-}
-
-// list.addEventListener('click', none);
-
-// function none() {
-//   btn.classList.remove('none');
-//   list.classList.add('none');
-// }
+btn.addEventListener('click', e => {
+  list.classList.toggle('block');
+});
 
 // const slider = new Swiper('.slider', {
 //   speed: 800,
